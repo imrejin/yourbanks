@@ -1,0 +1,51 @@
+/* Styling for the navigation bar */
+.navbar {
+    background: transparent; /* Set the background color of the navigation bar */
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+/* Styling for the navigation links */
+.navbar-nav .nav-link {
+    color: #333; /* Set the color of the navigation links */
+}
+
+/* Styling for the active navigation link */
+.navbar-collapse {
+    font-weight: bold; /* Set the active link text to bold */
+}
+
+/* Styling for the dropdown menu */
+.nav-item.dropdown .dropdown-menu {
+    background-color: #f8f9fa; /* Set the background color of the dropdown menu */
+}
+
+/* Background image for the body */
+body {
+    background-image: url('Happy.jpg');
+    min-height: 116vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
+.BranchLabel {
+    margin-right: 15px;
+}
+
+.Branch {
+    width: 100px; /* Adjust the width as needed */
+}

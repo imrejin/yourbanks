@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login_styles.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="wrapper">
+            <h1>LOGIN</h1>
+
+            <div class="input-box">
+                <label for="username">Username</label><i class='bx bxs-user'></i>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Password</label><i class='bx bxs-lock-alt'></i>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            {% if form.non_field_errors %}
+                <div class="error-message">{{ form.non_field_errors }}</div>
+            {% endif %}
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

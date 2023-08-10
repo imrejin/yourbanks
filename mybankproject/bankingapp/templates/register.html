@@ -1,0 +1,38 @@
+{% load static %}
+{% block metadescription %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>sign up</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div class="wrapper">
+            <h1>SIGN UP</h1>
+
+            <div class="input-box">
+                <label for="username">Username</label><i class='bx bxs-user'></i>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Password</label><i class='bx bxs-lock-alt'></i>
+                <input type="password" id="password" name="password" required><br>
+            </div>
+
+            <div class="input-box">
+                <label for="confirm_password">Confirm Password</label><i class='bx bxs-lock-alt'></i>
+                <input type="password" id="confirm_password" name="confirm_password" required><br>
+            </div>
+
+             <button type="submit" class="btn">Submit</button>
+        </div>
+
+        <div class="register-link"><p><a href="{% url 'login' %}">Back to login</a></p>
+        </div>
+    </form>
+</body>
+</html>
+{% endblock %}
